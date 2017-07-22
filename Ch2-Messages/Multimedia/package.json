@@ -2,6 +2,7 @@
     "name": "bot-multimedia-messages",
     "version": "1.0.0",
     "scripts": {
+        "recv": "node recv.js",
         "send": "node send.js"
     },
     "dependencies": {
