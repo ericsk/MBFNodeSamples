@@ -1,0 +1,12 @@
+{
+    "name": "bot-multimedia-messages",
+    "version": "1.0.0",
+    "scripts": {
+        "send": "node send.js"
+    },
+    "dependencies": {
+        "botbuilder": "^3.8.4",
+        "request": "^2.81.0",
+        "restify": "^5.0.1"
+    }
+}
