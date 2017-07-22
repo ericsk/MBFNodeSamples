@@ -1,0 +1,12 @@
+{
+    "name": "bot-text-messages",
+    "version": "1.0.0",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "botbuilder": "^3.8.4",
+        "restify": "^5.0.1"
+    }
+}
