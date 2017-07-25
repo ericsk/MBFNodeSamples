@@ -1,0 +1,25 @@
+{
+  "name": "my-ts-bot",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "build": "tsc",
+    "postinstall": "npm run build",
+    "watch": "nodemon -x ts-node -- app.ts",
+    "start": "npm run build && node dist/app.js"
+  },
+  "dependencies": {
+    "botbuilder": "^3.8.4",
+    "request": "^2.81.0",
+    "restify": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.15",
+    "@types/request": "^2.0.0",
+    "@types/restify": "^5.0.1",
+    "nodemon": "^1.11.0",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.5.0",
+    "typescript": "^2.4.2"
+  }
+}
