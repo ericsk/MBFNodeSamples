@@ -16,7 +16,7 @@ let connector: builder.ChatConnector = new builder.ChatConnector({
 });
 server.post('/api/messages', connector.listen());
 
-let bot: builder.UniversalBot = new builder.UniversalBot(connector, (session: builder.Session): void => {
+let defaultDialog: builder.IDialogWaterfallStep = (session: builder.Session): void => {
     let msg: builder.IMessage = session.message;
     let postOpt: request.Options = {
             url: `${IMGSEARCH_URL}?q=${msg.text}`,
@@ -46,4 +46,6 @@ let bot: builder.UniversalBot = new builder.UniversalBot(connector, (session: bu
         retMsg.attachmentLayout(builder.AttachmentLayout.carousel);
         session.send(retMsg);
     });
-});
+};
+
+let bot: builder.UniversalBot = new builder.UniversalBot(connector, defaultDialog);
